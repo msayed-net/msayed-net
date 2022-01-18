@@ -4,8 +4,6 @@ Flutter | Python Engineer
 
 ---
 
-![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
-
 ## 🧑 About me
 
 - I'm working as a **Software Engineer** since 2017, with many success deliveries.
@@ -45,5 +43,7 @@ Flutter | Python Engineer
 ![Github Streaks](https://github-profile-trophy.vercel.app/?username=msayed-net&margin-w=5&theme=radical)
 
 ---
+
+![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
 
 **Inspired By [TopCodeBeast](https://github.com/TopCodeBeast)**
