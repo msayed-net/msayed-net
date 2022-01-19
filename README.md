@@ -1,26 +1,20 @@
-# Hey There 👋 , I'm [Mohamed Sayed](https://github.com/msayed-net)
+# Hey There 👋 , I'm a [Software Engineer](https://github.com/msayed-net) ![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
 
-Flutter | Python Engineer
+
+![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Dart-Lover-6B9CB0) ![](https://img.shields.io/badge/Exp-5+yrs-red)
 
 ---
 
 ## 🧑 About me
 
-- I'm working as a **Software Engineer** since 2017, with many success deliveries.
-- I'm **self-motivated learner** with solid experties trying to keep it always updated.
-- I'm Creative, sophisticated, dedicated engineer with imaginative and efficient solutions for large-scale projects.
-- Keeping **quality** as high as possible, with rapid deployment.
-- Responsive to client-needs and detail-oriented.
-- I'm okay to work alone, with talented team.
-- Always looking for new challenges, solutions and experiences.
+- 👨🏽‍💻 I'm working as a Software Engineer since 2017
+- 👨🏽‍💻 I’m currently working @ [FIXTAG](https://wsmco.sa)
+- 👨🏽‍💻 I'm currently working on [PalesinteDevelopers](https://github.com/PalestineDevelopers)
+- 👨🏽‍💻 I’m specialized in [Flutter](https://github.com/flutter/flutter), [Django](https://github.com/django/django) and [WordPress](https://github.com/WordPress/WordPress)
+- 👨🏽‍💻 Ask me about mobile and web development, I am happy to help 🤝
+- 👨🏽‍💻 You can reach me via [LinkedIn](https://www.linkedin.com/in/msayed-net), [Facebook](https://www.facebook.com/msayed.net) or [Mail](mailto:msayed95@icloud.com)
 
-## 🥇 Specialized in
-
-- Mobile App Development ( Flutter 💘 ).
-- Backend Development (Django 💘 / WordPress).
-- Python 💘 Scripting (bots/automation/data)
-
-## ℹ️ &nbsp;Github Info
+---
 
 ### Github Details
 
@@ -41,9 +35,3 @@ Flutter | Python Engineer
 ### Github Achievements
 
 ![Github Streaks](https://github-profile-trophy.vercel.app/?username=msayed-net&margin-w=5&theme=radical)
-
----
-
-![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
-
-**Inspired By [TopCodeBeast](https://github.com/TopCodeBeast)**
