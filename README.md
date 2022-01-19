@@ -1,7 +1,7 @@
 # Hey There 👋 , I'm a [Software Engineer](https://github.com/msayed-net) ![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
 
 
-![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Dart-Lover-6B9CB0) ![](https://img.shields.io/badge/Exp-5+yrs-red)
+![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Exp-5+yrs-red)
 
 ---
 
@@ -10,7 +10,7 @@
 - 👨🏽‍💻 I'm working as a Software Engineer since 2017
 - 👨🏽‍💻 I’m currently working @ [FIXTAG](https://wsmco.sa)
 - 👨🏽‍💻 I'm currently working on [PalesinteDevelopers](https://github.com/PalestineDevelopers)
-- 👨🏽‍💻 I’m specialized in [Flutter](https://github.com/flutter/flutter), [Django](https://github.com/django/django) and [WordPress](https://github.com/WordPress/WordPress)
+- 👨🏽‍💻 I’m Interested in ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![WordPress](https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 - 👨🏽‍💻 Ask me about mobile and web development, I am happy to help 🤝
 - 👨🏽‍💻 You can reach me via [LinkedIn](https://www.linkedin.com/in/msayed-net), [Facebook](https://www.facebook.com/msayed.net) or [Mail](mailto:msayed95@icloud.com)
 
