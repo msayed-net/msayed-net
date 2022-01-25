@@ -8,7 +8,7 @@
 ## 🧑 About me
 
 - 👨🏽‍💻 I'm working as a Software Engineer since 2017
-- 👨🏽‍💻 I’m currently working @ [FIXTAG](https://wsmco.sa)
+- 👨🏽‍💻 I’m currently working @ [WSMCO](https://wsmco.sa)
 - 👨🏽‍💻 I'm currently working on [PalesinteDevelopers](https://github.com/PalestineDevelopers)
 - 👨🏽‍💻 I’m Interested in ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![WordPress](https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 - 👨🏽‍💻 Ask me about mobile and web development, I am happy to help 🤝
