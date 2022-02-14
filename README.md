@@ -1,6 +1,5 @@
 # Hey There 👋 , I'm a [Software Engineer](https://github.com/msayed-net)
 
-
 ![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Exp-4+yrs-orange) ![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
 
 ---
@@ -18,6 +17,10 @@
 
 ![Github Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=msayed-net&theme=github_dark)
 
+### Github Top Languages
+
+![Top Langs By Repo](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=msayed-net&theme=github_dark) ![Top Langs By Commit](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=msayed-net&theme=github_dark)
+
 ### Github Stats
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=msayed-net&hide_border=true&count_private=true&show_icons=true&theme=radical)
@@ -32,4 +35,4 @@
 
 ### Github Achievements
 
-![Github Streaks](https://github-profile-trophy.vercel.app/?username=msayed-net&margin-w=5&theme=radical)
+![Github Streaks](https://github-profile-trophy.vercel.app/?username=msayed-net&theme=dracula)
