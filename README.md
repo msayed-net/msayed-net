@@ -6,7 +6,8 @@
 
 ## 🧑 About me
 
-- 👨🏽‍💻 I’m currently working @ [WSMCO](https://wsmco.sa) and founder of [PalesinteDevelopers](https://github.com/PalestineDevelopers)
+- 👨🏽‍💻 I’m currently working @ [WSMCO](https://wsmco.sa) 
+- 👨🏽‍💻 I'm proudly founder and maintainer of [PalesinteDevelopers](https://github.com/PalestineDevelopers)
 - 👀 Interests ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![WordPress](https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 - 💞️ Ask me about mobile and web development, I am happy to help 🤝
 - 📫 You can reach me via [LinkedIn](https://www.linkedin.com/in/msayed-net), [Facebook](https://www.facebook.com/msayed.net) or [Mail](mailto:msayed95@icloud.com)
