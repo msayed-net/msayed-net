@@ -6,34 +6,34 @@
 
 ## 🧑 About me
 
-- 👨🏽‍💻 I’m currently working @ [WSMCO](https://wsmco.sa) 
-- 👨🏽‍💻 I'm proudly founder and maintainer of [PalesinteDevelopers](https://github.com/PalestineDevelopers)
-- 👀 Interests ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![WordPress](https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-- 💞️ Ask me about mobile and web development, I am happy to help 🤝
-- 📫 You can reach me via [LinkedIn](https://www.linkedin.com/in/msayed-net), [Facebook](https://www.facebook.com/msayed.net) or [Mail](mailto:msayed95@icloud.com)
+- 👨🏽‍💻 I’m currently working @ [WSM](https://wsmco.sa) & [PalesinteDevelopers](https://github.com/PalestineDevelopers)
+
+
+## 🛠 Skills
+
+<a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/>
+</a>
+<a href="https://dart.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> 
+</a>
+<a href="https://djangoproject.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="django" width="80" height="40"/> 
+</a>
+<a href="https://python.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="python" width="40" height="40"/> 
+</a>
+<a href="https://wordpress.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/wordpress/wordpress-icon.svg" alt="wordpress" width="80" height="40"/> 
+</a>
+
+## Social
+<a href="https://github.com/msayed-net" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" width="32" height="32" /> </a> 
+  <a href="https://www.linkedin.com/in/msayed-net/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /> </a>
 
 ---
-
-### Github Details
-
-![Github Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=msayed-net&theme=github_dark)
-
-### Github Top Languages
-
-![Top Langs By Repo](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=msayed-net&theme=github_dark) ![Top Langs By Commit](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=msayed-net&theme=github_dark)
 
 ### Github Stats
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=msayed-net&hide_border=true&count_private=true&show_icons=true&theme=radical)
 
-### Github Streaks
-
-![Github Streaks](https://github-readme-streak-stats.herokuapp.com/?user=msayed-net&theme=black-ice&hide_border=true&stroke=0000&background=0D1117&ring=e05397&fire=e05397&currStreakLabel=e05397)
 
 ### Github Contribution Graph
 
 ![Github Streaks](https://activity-graph.herokuapp.com/graph?username=msayed-net&bg_color=0D1117&color=e05397&line=e05397&point=FFFFFF&hide_border=true&)
 
-### Github Achievements
-
-![Github Streaks](https://github-profile-trophy.vercel.app/?username=msayed-net&theme=dracula)
