@@ -6,7 +6,7 @@
 
 ## 🧑 About me
 
-- 👨🏽‍💻 I’m currently working @ [WSM](https://wsmco.sa) & [PalesinteDevelopers](https://github.com/PalestineDevelopers)
+- 👨🏽‍💻 I’m currently working on something big
 
 [![committers.top badge](https://user-badge.committers.top/egypt_public/msayed-net.svg)](https://user-badge.committers.top/egypt_public/msayed-net)
 
