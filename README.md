@@ -34,8 +34,3 @@
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=msayed-net&hide_border=true&count_private=true&show_icons=true&theme=radical)
 
-
-### Github Contribution Graph
-
-![Github Streaks](https://activity-graph.herokuapp.com/graph?username=msayed-net&bg_color=0D1117&color=e05397&line=e05397&point=FFFFFF&hide_border=true&)
-
