@@ -1,6 +1,6 @@
 # Hey There 👋 , I'm a [Software Engineer](https://github.com/msayed-net)
 
-![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Exp-4+yrs-orange) ![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net)
+![](https://img.shields.io/badge/Mobile-Engineer-sucess)  ![](https://img.shields.io/badge/Flutter-Expert-informational) ![](https://img.shields.io/badge/Exp-4+yrs-orange) ![Recent Profile Views](https://komarev.com/ghpvc/?username=msayed-net&label=Views&color=blue&style=plastic&style=for-the-badge)
 
 ---
 
