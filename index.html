@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Digital Hub</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -164,6 +164,88 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
+        /* Custom icons for missing Font Awesome icons */
+        .custom-x-icon:before {
+            content: "𝕏";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .custom-threads-icon:before {
+            content: "@";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .custom-linkedin-icon:before {
+            content: "in";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            background: #0077b5;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .custom-youtube-icon:before {
+            content: "▶";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #ff0000;
+        }
+
+        .custom-instagram-icon:before {
+            content: "📷";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+        }
+
+        .custom-tiktok-icon:before {
+            content: "♫";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .custom-facebook-icon:before {
+            content: "f";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            background: #1877f2;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .custom-reddit-icon:before {
+            content: "r/";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            background: #ff4500;
+            color: white;
+            padding: 2px 3px;
+            border-radius: 3px;
+        }
+
+        /* Fallback for when Font Awesome icons don't load */
+        .icon-fallback {
+            display: none;
+        }
+
+        .fa-x-twitter {
+            display: none;
+        }
+
+        .fa-threads {
+            display: none;
+        }
+
         .floating-elements {
             position: fixed;
             top: 0;
@@ -283,42 +365,42 @@
                 {
                     platform: "LinkedIn",
                     url: "https://www.linkedin.com/in/msayed-net/",
-                    icon: "fab fa-linkedin"
+                    icon: "custom-linkedin-icon"
                 },
                 {
                     platform: "X (Twitter)",
                     url: "https://x.com/Mohamed10824378",
-                    icon: "fab fa-x-twitter"
+                    icon: "custom-x-icon"
                 },
                 {
                     platform: "YouTube",
                     url: "https://www.youtube.com/@msayed-net",
-                    icon: "fab fa-youtube"
+                    icon: "custom-youtube-icon"
                 },
                 {
                     platform: "Instagram",
                     url: "https://www.instagram.com/msayed.cs/",
-                    icon: "fab fa-instagram"
+                    icon: "custom-instagram-icon"
                 },
                 {
                     platform: "TikTok",
                     url: "https://www.tiktok.com/@msayed.cs",
-                    icon: "fab fa-tiktok"
+                    icon: "custom-tiktok-icon"
                 },
                 {
                     platform: "Threads",
                     url: "https://www.threads.net/@msayed.cs",
-                    icon: "fab fa-threads"
+                    icon: "custom-threads-icon"
                 },
                 {
                     platform: "Facebook",
                     url: "https://www.facebook.com/msayed.net/",
-                    icon: "fab fa-facebook"
+                    icon: "custom-facebook-icon"
                 },
                 {
                     platform: "Reddit",
                     url: "https://www.reddit.com/user/m_sayed/",
-                    icon: "fab fa-reddit"
+                    icon: "custom-reddit-icon"
                 }
             ]
         };
@@ -428,7 +510,14 @@
                 socialElement.target = '_blank';
                 socialElement.rel = 'noopener noreferrer';
                 socialElement.title = social.platform;
-                socialElement.innerHTML = `<i class="${social.icon}"></i>`;
+                
+                // Handle custom icons vs Font Awesome icons
+                if (social.icon.startsWith('custom-')) {
+                    socialElement.innerHTML = `<span class="${social.icon}"></span>`;
+                } else {
+                    socialElement.innerHTML = `<i class="${social.icon}"></i>`;
+                }
+                
                 socialIconsContainer.appendChild(socialElement);
             });
         }
