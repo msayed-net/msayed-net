@@ -164,6 +164,88 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
+        .visit-counter {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .counter-display {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .counter-display i {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .analytics-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 12px;
+            max-width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .analytics-panel.show {
+            transform: translateX(0);
+        }
+
+        .analytics-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .analytics-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .analytics-info {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .analytics-label {
+            opacity: 0.8;
+            margin-right: 10px;
+        }
+
+        .analytics-value {
+            font-weight: 600;
+            color: #4A90E2;
+        }
+
         .floating-elements {
             position: fixed;
             top: 0;
@@ -224,7 +306,7 @@
 
     <div class="container">
         <!-- Profile Section -->
-        <img src="profile-pic.jpeg" alt="Profile Picture" class="profile-image" id="profileImage">
+        <img src="https://via.placeholder.com/120x120/667eea/white?text=YOU" alt="Profile Picture" class="profile-image" id="profileImage">
         <h1 id="profileName">Your Name</h1>
         <p class="headline" id="profileHeadline">Your Professional Headline • Location</p>
 
@@ -239,6 +321,59 @@
         </div>
     </div>
 
+    <!-- Analytics Toggle Button -->
+    <button class="analytics-toggle" id="analyticsToggle" title="View Analytics">
+        <i class="fas fa-chart-line"></i>
+    </button>
+
+    <!-- Analytics Panel -->
+    <div class="analytics-panel" id="analyticsPanel">
+        <h4 style="margin-bottom: 15px; color: #4A90E2;">📊 Visitor Analytics</h4>
+        <div class="analytics-info">
+            <span class="analytics-label">Total Visits:</span>
+            <span class="analytics-value" id="totalVisits">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Your IP:</span>
+            <span class="analytics-value" id="userIP">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Location:</span>
+            <span class="analytics-value" id="userLocation">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Device:</span>
+            <span class="analytics-value" id="userDevice">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Browser:</span>
+            <span class="analytics-value" id="userBrowser">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">OS:</span>
+            <span class="analytics-value" id="userOS">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Screen:</span>
+            <span class="analytics-value" id="userScreen">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Timezone:</span>
+            <span class="analytics-value" id="userTimezone">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Language:</span>
+            <span class="analytics-value" id="userLanguage">Loading...</span>
+        </div>
+        <div class="analytics-info">
+            <span class="analytics-label">Last Visit:</span>
+            <span class="analytics-value" id="lastVisit">Loading...</span>
+        </div>
+        <div style="margin-top: 10px; font-size: 10px; opacity: 0.6; text-align: center;">
+            Click outside to close
+        </div>
+    </div>
+
     <script>
         // ================================
         // EASY CONFIGURATION SECTION
@@ -247,7 +382,7 @@
             // Personal Info
             name: "Mohamed Sayed",
             headline: "Mobile Lead • Flutter + AI Architect • MSc Data Science 🚀",
-            profileImage: "https://via.placeholder.com/120x120/4A90E2/white?text=MS", // Replace with your image URL
+            profileImage: "./profile-pic.jpeg", // Your profile image
             
             // Main Links (these appear as buttons)
             mainLinks: [
@@ -434,7 +569,214 @@
         }
 
         // Initialize the page
-        document.addEventListener('DOMContentLoaded', populateProfile);
+        document.addEventListener('DOMContentLoaded', function() {
+            populateProfile();
+            initializeAnalytics();
+        });
+
+        // ================================
+        // ANALYTICS SYSTEM
+        // ================================
+        let analyticsData = {
+            visits: 0,
+            ip: '',
+            location: '',
+            device: '',
+            browser: '',
+            os: '',
+            screen: '',
+            timezone: '',
+            language: '',
+            lastVisit: ''
+        };
+
+        function initializeAnalytics() {
+            // Get or create visit count
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem('visitCount', visitCount);
+            
+            // Update visit counter display - with error checking
+            const visitCountElement = document.getElementById('visitCount');
+            const totalVisitsElement = document.getElementById('totalVisits');
+            
+            if (visitCountElement) {
+                visitCountElement.textContent = visitCount;
+            }
+            if (totalVisitsElement) {
+                totalVisitsElement.textContent = visitCount;
+            }
+
+            // Get device info
+            getDeviceInfo();
+            
+            // Get IP and location info
+            getIPInfo();
+            
+            // Set up analytics toggle
+            setupAnalyticsToggle();
+        }
+
+        function getDeviceInfo() {
+            const userAgent = navigator.userAgent;
+            
+            // Detect device type
+            let deviceType = 'Desktop';
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+                deviceType = 'Mobile';
+            } else if (/iPad/i.test(userAgent)) {
+                deviceType = 'Tablet';
+            }
+            
+            // Detect browser
+            let browser = 'Unknown';
+            if (userAgent.includes('Chrome')) browser = 'Chrome';
+            else if (userAgent.includes('Firefox')) browser = 'Firefox';
+            else if (userAgent.includes('Safari')) browser = 'Safari';
+            else if (userAgent.includes('Edge')) browser = 'Edge';
+            else if (userAgent.includes('Opera')) browser = 'Opera';
+            
+            // Detect OS
+            let os = 'Unknown';
+            if (userAgent.includes('Windows')) os = 'Windows';
+            else if (userAgent.includes('Mac')) os = 'macOS';
+            else if (userAgent.includes('Linux')) os = 'Linux';
+            else if (userAgent.includes('Android')) os = 'Android';
+            else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
+            
+            // Get screen info
+            const screen = `${window.screen.width}x${window.screen.height}`;
+            
+            // Get timezone
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            
+            // Get language
+            const language = navigator.language || navigator.userLanguage;
+            
+            // Get last visit time
+            const lastVisit = new Date().toLocaleString();
+            
+            // Update analytics data
+            analyticsData.device = deviceType;
+            analyticsData.browser = browser;
+            analyticsData.os = os;
+            analyticsData.screen = screen;
+            analyticsData.timezone = timezone;
+            analyticsData.language = language;
+            analyticsData.lastVisit = lastVisit;
+            
+            // Update display with error checking
+            const elements = {
+                userDevice: analyticsData.device,
+                userBrowser: analyticsData.browser,
+                userOS: analyticsData.os,
+                userScreen: analyticsData.screen,
+                userTimezone: analyticsData.timezone,
+                userLanguage: analyticsData.language,
+                lastVisit: analyticsData.lastVisit
+            };
+            
+            Object.keys(elements).forEach(elementId => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.textContent = elements[elementId];
+                }
+            });
+        }
+
+        function getIPInfo() {
+            // Try to get IP and location info from multiple free services
+            const services = [
+                'https://api.ipify.org?format=json',
+                'https://ipapi.co/json/',
+                'https://ipinfo.io/json'
+            ];
+            
+            // Try first service (IP only)
+            fetch(services[0])
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ip) {
+                        analyticsData.ip = data.ip;
+                        const ipElement = document.getElementById('userIP');
+                        if (ipElement) {
+                            ipElement.textContent = data.ip;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.log('IP service 1 failed:', error);
+                });
+            
+            // Try second service (IP + Location)
+            fetch(services[1])
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ip) {
+                        analyticsData.ip = data.ip;
+                        const ipElement = document.getElementById('userIP');
+                        if (ipElement) {
+                            ipElement.textContent = data.ip;
+                        }
+                    }
+                    if (data.city && data.country_name) {
+                        analyticsData.location = `${data.city}, ${data.country_name}`;
+                        const locationElement = document.getElementById('userLocation');
+                        if (locationElement) {
+                            locationElement.textContent = analyticsData.location;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.log('IP service 2 failed:', error);
+                    // Try third service as fallback
+                    fetch(services[2])
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.ip) {
+                                analyticsData.ip = data.ip;
+                                const ipElement = document.getElementById('userIP');
+                                if (ipElement) {
+                                    ipElement.textContent = data.ip;
+                                }
+                            }
+                            if (data.city && data.country) {
+                                analyticsData.location = `${data.city}, ${data.country}`;
+                                const locationElement = document.getElementById('userLocation');
+                                if (locationElement) {
+                                    locationElement.textContent = analyticsData.location;
+                                }
+                            }
+                        })
+                        .catch(error => {
+                            console.log('All IP services failed:', error);
+                            const ipElement = document.getElementById('userIP');
+                            const locationElement = document.getElementById('userLocation');
+                            if (ipElement) {
+                                ipElement.textContent = 'Not available';
+                            }
+                            if (locationElement) {
+                                locationElement.textContent = 'Not available';
+                            }
+                        });
+                });
+        }
+
+        function setupAnalyticsToggle() {
+            const toggleBtn = document.getElementById('analyticsToggle');
+            const panel = document.getElementById('analyticsPanel');
+            
+            toggleBtn.addEventListener('click', function() {
+                panel.classList.toggle('show');
+            });
+            
+            // Close panel when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!toggleBtn.contains(event.target) && !panel.contains(event.target)) {
+                    panel.classList.remove('show');
+                }
+            });
+        }
     </script>
 </body>
 </html>
