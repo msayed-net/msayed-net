@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Digital Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .headline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-item:hover:before {
+            left: 100%;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-icon {
+            font-size: 20px;
+            margin-right: 15px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .link-text {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .floating-element:nth-child(3) { bottom: 10%; left: 20%; animation-delay: 2s; }
+        .floating-element:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 3s; }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .headline {
+                font-size: 14px;
+            }
+            
+            .link-item {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating background elements -->
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <img src="https://via.placeholder.com/120x120/667eea/white?text=YOU" alt="Profile Picture" class="profile-image" id="profileImage">
+        <h1 id="profileName">Your Name</h1>
+        <p class="headline" id="profileHeadline">Your Professional Headline • Location</p>
+
+        <!-- Main Links -->
+        <div class="links" id="mainLinks">
+            <!-- Links will be populated by JavaScript -->
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons" id="socialIcons">
+            <!-- Social icons will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // ================================
+        // EASY CONFIGURATION SECTION
+        // ================================
+        const CONFIG = {
+            // Personal Info
+            name: "Mohamed Sayed",
+            headline: "Mobile Lead • Flutter + AI Architect • MSc Data Science 🚀",
+            profileImage: "https://via.placeholder.com/120x120/4A90E2/white?text=MS", // Replace with your image URL
+            
+            // Main Links (these appear as buttons)
+            mainLinks: [
+                {
+                    title: "GitHub Portfolio",
+                    url: "https://github.com/msayed-net",
+                    icon: "fab fa-github"
+                },
+                {
+                    title: "Stack Overflow",
+                    url: "https://stackoverflow.com/users/7560822/mohamed-sayed",
+                    icon: "fab fa-stack-overflow"
+                },
+                {
+                    title: "Download Resume",
+                    url: "#", // Update this later with your resume URL
+                    icon: "fas fa-file-alt"
+                },
+                {
+                    title: "Schedule Meeting",
+                    url: "#", // Update this with your calendar booking URL
+                    icon: "fas fa-calendar-alt"
+                },
+                {
+                    title: "Email Me",
+                    url: "mailto:contact@msayed.net", // Update with your email
+                    icon: "fas fa-envelope"
+                }
+            ],
+            
+            // Social Links (these appear as circular icons)
+            socialLinks: [
+                {
+                    platform: "LinkedIn",
+                    url: "https://www.linkedin.com/in/msayed-net/",
+                    icon: "fab fa-linkedin"
+                },
+                {
+                    platform: "X (Twitter)",
+                    url: "https://x.com/Mohamed10824378",
+                    icon: "fab fa-x-twitter"
+                },
+                {
+                    platform: "YouTube",
+                    url: "https://www.youtube.com/@msayed-net",
+                    icon: "fab fa-youtube"
+                },
+                {
+                    platform: "Instagram",
+                    url: "https://www.instagram.com/msayed.cs/",
+                    icon: "fab fa-instagram"
+                },
+                {
+                    platform: "TikTok",
+                    url: "https://www.tiktok.com/@msayed.cs",
+                    icon: "fab fa-tiktok"
+                },
+                {
+                    platform: "Threads",
+                    url: "https://www.threads.net/@msayed.cs",
+                    icon: "fab fa-threads"
+                },
+                {
+                    platform: "Facebook",
+                    url: "https://www.facebook.com/msayed.net/",
+                    icon: "fab fa-facebook"
+                },
+                {
+                    platform: "Reddit",
+                    url: "https://www.reddit.com/user/m_sayed/",
+                    icon: "fab fa-reddit"
+                }
+            ]
+        };
+
+        // ================================
+        // AVAILABLE PLATFORMS & ICONS
+        // ================================
+        /*
+        Popular platforms you can add:
+        
+        SOCIAL MEDIA:
+        - Facebook: "fab fa-facebook"
+        - Twitter/X: "fab fa-twitter" or "fab fa-x-twitter"
+        - Instagram: "fab fa-instagram"
+        - TikTok: "fab fa-tiktok"
+        - YouTube: "fab fa-youtube"
+        - LinkedIn: "fab fa-linkedin"
+        - Pinterest: "fab fa-pinterest"
+        - Snapchat: "fab fa-snapchat"
+        - Reddit: "fab fa-reddit"
+        - Tumblr: "fab fa-tumblr"
+        
+        PROFESSIONAL:
+        - GitHub: "fab fa-github"
+        - GitLab: "fab fa-gitlab"
+        - Dribbble: "fab fa-dribbble"
+        - Behance: "fab fa-behance"
+        - Medium: "fab fa-medium"
+        - Dev.to: "fab fa-dev"
+        - Stack Overflow: "fab fa-stack-overflow"
+        
+        COMMUNICATION:
+        - Email: "fas fa-envelope"
+        - Phone: "fas fa-phone"
+        - WhatsApp: "fab fa-whatsapp"
+        - Telegram: "fab fa-telegram"
+        - Signal: "fas fa-comment-dots"
+        - Discord: "fab fa-discord"
+        - Slack: "fab fa-slack"
+        - Skype: "fab fa-skype"
+        
+        CONTENT PLATFORMS:
+        - Twitch: "fab fa-twitch"
+        - Spotify: "fab fa-spotify"
+        - SoundCloud: "fab fa-soundcloud"
+        - Podcast: "fas fa-podcast"
+        - Blog: "fas fa-blog"
+        
+        BUSINESS:
+        - Website: "fas fa-globe"
+        - Portfolio: "fas fa-briefcase"
+        - Resume: "fas fa-file-alt"
+        - Calendar: "fas fa-calendar-alt"
+        - Store: "fas fa-store"
+        - PayPal: "fab fa-paypal"
+        - Venmo: "fab fa-cc-paypal"
+        
+        CRYPTO:
+        - Bitcoin: "fab fa-bitcoin"
+        - Ethereum: "fab fa-ethereum"
+        
+        GAMING:
+        - Steam: "fab fa-steam"
+        - Xbox: "fab fa-xbox"
+        - PlayStation: "fab fa-playstation"
+        
+        OTHERS:
+        - Link: "fas fa-link"
+        - Download: "fas fa-download"
+        - Document: "fas fa-file"
+        - Video: "fas fa-video"
+        - Music: "fas fa-music"
+        */
+
+        // ================================
+        // AUTO-POPULATION CODE
+        // ================================
+        function populateProfile() {
+            // Set profile info
+            document.getElementById('profileName').textContent = CONFIG.name;
+            document.getElementById('profileHeadline').textContent = CONFIG.headline;
+            document.getElementById('profileImage').src = CONFIG.profileImage;
+
+            // Populate main links
+            const mainLinksContainer = document.getElementById('mainLinks');
+            mainLinksContainer.innerHTML = '';
+            CONFIG.mainLinks.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.className = 'link-item';
+                linkElement.href = link.url;
+                linkElement.target = '_blank';
+                linkElement.rel = 'noopener noreferrer';
+                linkElement.innerHTML = `
+                    <i class="${link.icon} link-icon"></i>
+                    <span class="link-text">${link.title}</span>
+                `;
+                mainLinksContainer.appendChild(linkElement);
+            });
+
+            // Populate social icons
+            const socialIconsContainer = document.getElementById('socialIcons');
+            socialIconsContainer.innerHTML = '';
+            CONFIG.socialLinks.forEach(social => {
+                const socialElement = document.createElement('a');
+                socialElement.className = 'social-icon';
+                socialElement.href = social.url;
+                socialElement.target = '_blank';
+                socialElement.rel = 'noopener noreferrer';
+                socialElement.title = social.platform;
+                socialElement.innerHTML = `<i class="${social.icon}"></i>`;
+                socialIconsContainer.appendChild(socialElement);
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', populateProfile);
+    </script>
+</body>
+</html>
