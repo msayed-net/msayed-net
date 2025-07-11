@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Digital Hub</title>
+    <title>Mohamed Sayed - Digital Hub</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -56,6 +56,20 @@
             object-fit: cover;
             transition: transform 0.3s ease;
             animation: pulse 2s infinite;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         @keyframes pulse {
@@ -140,13 +154,13 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .social-icon {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             display: flex;
@@ -156,6 +170,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 16px;
         }
 
         .social-icon:hover {
@@ -164,45 +179,23 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .visit-counter {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 12px 20px;
-            margin: 20px 0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .counter-display {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 14px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .counter-display i {
-            font-size: 16px;
-            opacity: 0.8;
-        }
-
         .analytics-panel {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             color: white;
-            padding: 15px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 16px;
             font-size: 12px;
-            max-width: 300px;
+            max-width: 320px;
+            min-width: 280px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transform: translateX(100%);
             transition: transform 0.3s ease;
             z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .analytics-panel.show {
@@ -216,12 +209,18 @@
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: none;
-            padding: 12px;
+            padding: 15px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .analytics-toggle:hover {
@@ -230,20 +229,31 @@
         }
 
         .analytics-info {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 5px 0;
         }
 
         .analytics-label {
             opacity: 0.8;
             margin-right: 10px;
+            font-weight: 500;
         }
 
         .analytics-value {
             font-weight: 600;
             color: #4A90E2;
+            text-align: right;
+            word-break: break-word;
+        }
+
+        .analytics-panel h4 {
+            margin-bottom: 15px;
+            color: #4A90E2;
+            text-align: center;
+            font-size: 16px;
         }
 
         .floating-elements {
@@ -292,6 +302,28 @@
             .link-item {
                 padding: 14px 16px;
             }
+            
+            .analytics-panel {
+                right: 10px;
+                bottom: 10px;
+                max-width: calc(100vw - 40px);
+                min-width: auto;
+            }
+            
+            .analytics-toggle {
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .social-icons {
+                gap: 8px;
+            }
+            
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -306,9 +338,11 @@
 
     <div class="container">
         <!-- Profile Section -->
-        <img src="https://via.placeholder.com/120x120/667eea/white?text=YOU" alt="Profile Picture" class="profile-image" id="profileImage">
-        <h1 id="profileName">Your Name</h1>
-        <p class="headline" id="profileHeadline">Your Professional Headline • Location</p>
+        <div class="profile-image" id="profileImage">
+            MS
+        </div>
+        <h1 id="profileName">Mohamed Sayed</h1>
+        <p class="headline" id="profileHeadline">Mobile Lead • Flutter + AI Architect • MSc Data Science 🚀</p>
 
         <!-- Main Links -->
         <div class="links" id="mainLinks">
@@ -328,7 +362,7 @@
 
     <!-- Analytics Panel -->
     <div class="analytics-panel" id="analyticsPanel">
-        <h4 style="margin-bottom: 15px; color: #4A90E2;">📊 Visitor Analytics</h4>
+        <h4>📊 Visitor Analytics</h4>
         <div class="analytics-info">
             <span class="analytics-label">Total Visits:</span>
             <span class="analytics-value" id="totalVisits">Loading...</span>
@@ -369,7 +403,7 @@
             <span class="analytics-label">Last Visit:</span>
             <span class="analytics-value" id="lastVisit">Loading...</span>
         </div>
-        <div style="margin-top: 10px; font-size: 10px; opacity: 0.6; text-align: center;">
+        <div style="margin-top: 15px; font-size: 10px; opacity: 0.6; text-align: center;">
             Click outside to close
         </div>
     </div>
@@ -382,7 +416,8 @@
             // Personal Info
             name: "Mohamed Sayed",
             headline: "Mobile Lead • Flutter + AI Architect • MSc Data Science 🚀",
-            profileImage: "./profile-pic.jpeg", // Your profile image
+            profileImage: "https://avatars.githubusercontent.com/u/20269142?v=4", // GitHub profile image as fallback
+            profileInitials: "MS", // Fallback initials
             
             // Main Links (these appear as buttons)
             mainLinks: [
@@ -459,83 +494,32 @@
         };
 
         // ================================
-        // AVAILABLE PLATFORMS & ICONS
-        // ================================
-        /*
-        Popular platforms you can add:
-        
-        SOCIAL MEDIA:
-        - Facebook: "fab fa-facebook"
-        - Twitter/X: "fab fa-twitter" or "fab fa-x-twitter"
-        - Instagram: "fab fa-instagram"
-        - TikTok: "fab fa-tiktok"
-        - YouTube: "fab fa-youtube"
-        - LinkedIn: "fab fa-linkedin"
-        - Pinterest: "fab fa-pinterest"
-        - Snapchat: "fab fa-snapchat"
-        - Reddit: "fab fa-reddit"
-        - Tumblr: "fab fa-tumblr"
-        
-        PROFESSIONAL:
-        - GitHub: "fab fa-github"
-        - GitLab: "fab fa-gitlab"
-        - Dribbble: "fab fa-dribbble"
-        - Behance: "fab fa-behance"
-        - Medium: "fab fa-medium"
-        - Dev.to: "fab fa-dev"
-        - Stack Overflow: "fab fa-stack-overflow"
-        
-        COMMUNICATION:
-        - Email: "fas fa-envelope"
-        - Phone: "fas fa-phone"
-        - WhatsApp: "fab fa-whatsapp"
-        - Telegram: "fab fa-telegram"
-        - Signal: "fas fa-comment-dots"
-        - Discord: "fab fa-discord"
-        - Slack: "fab fa-slack"
-        - Skype: "fab fa-skype"
-        
-        CONTENT PLATFORMS:
-        - Twitch: "fab fa-twitch"
-        - Spotify: "fab fa-spotify"
-        - SoundCloud: "fab fa-soundcloud"
-        - Podcast: "fas fa-podcast"
-        - Blog: "fas fa-blog"
-        
-        BUSINESS:
-        - Website: "fas fa-globe"
-        - Portfolio: "fas fa-briefcase"
-        - Resume: "fas fa-file-alt"
-        - Calendar: "fas fa-calendar-alt"
-        - Store: "fas fa-store"
-        - PayPal: "fab fa-paypal"
-        - Venmo: "fab fa-cc-paypal"
-        
-        CRYPTO:
-        - Bitcoin: "fab fa-bitcoin"
-        - Ethereum: "fab fa-ethereum"
-        
-        GAMING:
-        - Steam: "fab fa-steam"
-        - Xbox: "fab fa-xbox"
-        - PlayStation: "fab fa-playstation"
-        
-        OTHERS:
-        - Link: "fas fa-link"
-        - Download: "fas fa-download"
-        - Document: "fas fa-file"
-        - Video: "fas fa-video"
-        - Music: "fas fa-music"
-        */
-
-        // ================================
         // AUTO-POPULATION CODE
         // ================================
         function populateProfile() {
             // Set profile info
             document.getElementById('profileName').textContent = CONFIG.name;
             document.getElementById('profileHeadline').textContent = CONFIG.headline;
-            document.getElementById('profileImage').src = CONFIG.profileImage;
+            
+            // Handle profile image with fallback
+            const profileImageContainer = document.getElementById('profileImage');
+            const img = document.createElement('img');
+            img.src = CONFIG.profileImage;
+            img.alt = CONFIG.name;
+            img.onerror = function() {
+                // If image fails to load, show initials
+                profileImageContainer.innerHTML = CONFIG.profileInitials;
+            };
+            img.onload = function() {
+                // If image loads successfully, replace initials
+                profileImageContainer.innerHTML = '';
+                profileImageContainer.appendChild(img);
+            };
+            
+            // Try to load the image
+            if (CONFIG.profileImage && CONFIG.profileImage !== '#') {
+                // Keep initials as fallback, image will replace if successful
+            }
 
             // Populate main links
             const mainLinksContainer = document.getElementById('mainLinks');
@@ -592,17 +576,12 @@
 
         function initializeAnalytics() {
             // Get or create visit count
-            let visitCount = localStorage.getItem('visitCount') || 0;
-            visitCount = parseInt(visitCount) + 1;
-            localStorage.setItem('visitCount', visitCount);
+            let visitCount = Number(localStorage.getItem('visitCount')) || 0;
+            visitCount += 1;
+            localStorage.setItem('visitCount', visitCount.toString());
             
-            // Update visit counter display - with error checking
-            const visitCountElement = document.getElementById('visitCount');
+            // Update visit counter display
             const totalVisitsElement = document.getElementById('totalVisits');
-            
-            if (visitCountElement) {
-                visitCountElement.textContent = visitCount;
-            }
             if (totalVisitsElement) {
                 totalVisitsElement.textContent = visitCount;
             }
@@ -645,7 +624,7 @@
             else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
             
             // Get screen info
-            const screen = `${window.screen.width}x${window.screen.height}`;
+            const screen = `${window.screen.width}×${window.screen.height}`;
             
             // Get timezone
             const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -665,7 +644,7 @@
             analyticsData.language = language;
             analyticsData.lastVisit = lastVisit;
             
-            // Update display with error checking
+            // Update display
             const elements = {
                 userDevice: analyticsData.device,
                 userBrowser: analyticsData.browser,
@@ -685,15 +664,8 @@
         }
 
         function getIPInfo() {
-            // Try to get IP and location info from multiple free services
-            const services = [
-                'https://api.ipify.org?format=json',
-                'https://ipapi.co/json/',
-                'https://ipinfo.io/json'
-            ];
-            
-            // Try first service (IP only)
-            fetch(services[0])
+            // Try to get IP and location info
+            fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
                 .then(data => {
                     if (data.ip) {
@@ -703,22 +675,12 @@
                             ipElement.textContent = data.ip;
                         }
                     }
+                    
+                    // Try to get location info
+                    return fetch('https://ipapi.co/json/');
                 })
-                .catch(error => {
-                    console.log('IP service 1 failed:', error);
-                });
-            
-            // Try second service (IP + Location)
-            fetch(services[1])
                 .then(response => response.json())
                 .then(data => {
-                    if (data.ip) {
-                        analyticsData.ip = data.ip;
-                        const ipElement = document.getElementById('userIP');
-                        if (ipElement) {
-                            ipElement.textContent = data.ip;
-                        }
-                    }
                     if (data.city && data.country_name) {
                         analyticsData.location = `${data.city}, ${data.country_name}`;
                         const locationElement = document.getElementById('userLocation');
@@ -728,37 +690,15 @@
                     }
                 })
                 .catch(error => {
-                    console.log('IP service 2 failed:', error);
-                    // Try third service as fallback
-                    fetch(services[2])
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.ip) {
-                                analyticsData.ip = data.ip;
-                                const ipElement = document.getElementById('userIP');
-                                if (ipElement) {
-                                    ipElement.textContent = data.ip;
-                                }
-                            }
-                            if (data.city && data.country) {
-                                analyticsData.location = `${data.city}, ${data.country}`;
-                                const locationElement = document.getElementById('userLocation');
-                                if (locationElement) {
-                                    locationElement.textContent = analyticsData.location;
-                                }
-                            }
-                        })
-                        .catch(error => {
-                            console.log('All IP services failed:', error);
-                            const ipElement = document.getElementById('userIP');
-                            const locationElement = document.getElementById('userLocation');
-                            if (ipElement) {
-                                ipElement.textContent = 'Not available';
-                            }
-                            if (locationElement) {
-                                locationElement.textContent = 'Not available';
-                            }
-                        });
+                    console.log('IP/Location services failed:', error);
+                    const ipElement = document.getElementById('userIP');
+                    const locationElement = document.getElementById('userLocation');
+                    if (ipElement) {
+                        ipElement.textContent = 'Not available';
+                    }
+                    if (locationElement) {
+                        locationElement.textContent = 'Not available';
+                    }
                 });
         }
 
@@ -766,16 +706,19 @@
             const toggleBtn = document.getElementById('analyticsToggle');
             const panel = document.getElementById('analyticsPanel');
             
-            toggleBtn.addEventListener('click', function() {
-                panel.classList.toggle('show');
-            });
-            
-            // Close panel when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!toggleBtn.contains(event.target) && !panel.contains(event.target)) {
-                    panel.classList.remove('show');
-                }
-            });
+            if (toggleBtn && panel) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    panel.classList.toggle('show');
+                });
+                
+                // Close panel when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!panel.contains(event.target) && !toggleBtn.contains(event.target)) {
+                        panel.classList.remove('show');
+                    }
+                });
+            }
         }
     </script>
 </body>
