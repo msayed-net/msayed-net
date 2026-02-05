@@ -1,5 +1,5 @@
 # Hey There! 👋 I'm Mohamed Sayed
-### 🚀 Tech Lead | Flutter Expert | AI + Flutter Architect
+### 🚀 Tech Lead
 
 <div align="center">
   
@@ -7,7 +7,7 @@
 ![Years of Experience](https://img.shields.io/badge/Experience-9+%20Years-brightgreen?style=flat-square)
 ![Mobile Engineer](https://img.shields.io/badge/Mobile-Engineer-success?style=flat-square)
 ![Flutter Expert](https://img.shields.io/badge/Flutter-Expert-02569B?style=flat-square&logo=flutter)
-![Since 2018](https://img.shields.io/badge/Coding%20Since-2018-orange?style=flat-square)
+![Since 2018](https://img.shields.io/badge/Coding%20Since-2017-orange?style=flat-square)
 
 </div>
 
@@ -20,10 +20,10 @@ const mohamed = {
     pronouns: "he/him",
     role: "Tech Lead",
     specialization: ["Mobile Development", "AI Architecture", "Backend Systems"],
-    primaryTech: ["Flutter", "AI", "Backend Python"],
+    primaryTech: ["Flutter", "AI", "Python"],
     yearsOfExperience: "9+",
     currentFocus: "Integrating AI into mobile applications and building intelligent systems",
-    askMeAbout: ["Flutter", "AI", "N8N", "Django", "AWS"],
+    askMeAbout: ["Flutter", "AI", "BE", "Arch"],
     funFact: "I teach machines to think and build mobile apps that learn 🤖📱"
 };
 ```
