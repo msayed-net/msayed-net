@@ -1,5 +1,5 @@
 # Hey There! 👋 I'm Mohamed Sayed
-### 🚀 Tech Lead · AI Platform Engineer
+### 🚀 AI Lead | MSc Data Science | Platform Engineer
 
 <div align="center">
 
