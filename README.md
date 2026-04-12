@@ -122,7 +122,12 @@ const mohamed = {
   <img src="https://www.gravatar.com/avatar/9cba87f0d8?s=150&d=identicon" alt="Gravatar Profile" width="80" height="80" style="border-radius: 50%"/>
 </a>
 
-### 📫 Reach out via Gravatar Profile Above
+### 📫 Let's Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/msayed-net)
+[![Dribbble](https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white)](https://dribbble.com/_msayed_)
+[![Stack Overflow](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/7560822/mohamed-sayed)
+[![n8n Creator](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://n8n.io/creators/msayed-cs/)
 
 </div>
 
